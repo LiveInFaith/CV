@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heinrich Rudman — Software Developer</title>
+  <meta name="description" content="Portfolio and CV for Heinie Rudman: projects, skills, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-brand" href="index.html">Heinrich Rudman</a>
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a class="nav-link is-active" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+        <a class="nav-link" href="contact.html">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Software Developer</p>
+        <h1 class="hero-title">I build reliable, human‑centered software.</h1>
+        <p class="hero-subtitle">Focused on clean back‑ends, practical UX, and maintainable code across C#, Java, Node.js, and modern databases.</p>
+        <div class="hero-cta">
+          <a class="button button-primary" href="projects.html">See Projects</a>
+          <a class="button" href="skills.html">View Skills</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 class="section-title">Featured Work</h2>
+          <p class="section-note">A quick look — full list on the Projects page</p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <span class="badge">C# • MongoDB</span>
+            <h3 class="card-title">Inventory System</h3>
+            <p class="card-text">CRUD, LINQ filtering, JSON import/export, and a clean repository layer.</p>
+            <div class="tag-list"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">MongoDB</span></div>
+            <div class="card-actions">
+              <a class="link" href="#">View Code</a>
+              <a class="link" href="#">Read Docs</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="badge">Java • Swing</span>
+            <h3 class="card-title">Student Wellness App</h3>
+            <p class="card-text">DAO‑driven desktop app with MVC and Derby DB.</p>
+            <div class="tag-list"><span class="tag">Java</span><span class="tag">Swing</span><span class="tag">Derby</span></div>
+            <div class="card-actions">
+              <a class="link" href="#">View Code</a>
+              <a class="link" href="#">Screens</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="badge">Unity • UX</span>
+            <h3 class="card-title">VR Drone HUD</h3>
+            <p class="card-text">TMP overlays, countdown cues, and non‑VR keyboard fallbacks for testing.</p>
+            <div class="tag-list"><span class="tag">Unity</span><span class="tag">C#</span></div>
+            <div class="card-actions">
+              <a class="link" href="#">View Code</a>
+              <a class="link" href="#">Demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="year"></span> Heinrich Rudman</span>
+      <a class="link" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
