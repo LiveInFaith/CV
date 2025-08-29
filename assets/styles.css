@@ -1,5 +1,5 @@
 :root{
-  --page-bg:#070f16;          /* deep navy */
+  --page-bg:#070f16e1;          /* deep navy */
   --page-bg-deep:#040a11;     /* bottom gradient */
   --surface-1:#0b1722;        /* section surface */
   --surface-2:#0f1f2b;        /* card surface */
@@ -29,7 +29,7 @@ body::before{
   inset:-25% -10% auto -10%; 
   height:65vh; z-index:-1; 
   pointer-events:none;
-  background: linear-gradient(120deg, rgba(45,212,191,.30) 10%, rgba(45,212,191,.20) 35%, rgba(34,211,238,.05) 65%, rgba(0,0,0,0) 80%);
+  background: linear-gradient(100deg, rgba(45,212,191,.30) 10%, rgba(45,212,191,.20) 35%, rgba(34,211,238,.05) 65%, rgba(0,0,0,0) 50%);
   filter: blur(42px) saturate(120%);
   transform: translateY(-10%) rotate(-18deg);
   animation: beamFloat 14s ease-in-out infinite alternate;
@@ -48,7 +48,8 @@ body::before{
     display:flex; 
     align-items:flex-end; 
     justify-content:space-between; 
-    gap:12px; margin-bottom:22px }
+    gap:12px; 
+    margin-bottom:22px }
 .section-title{
     margin:0; 
     font-size:clamp(22px,2.4vw,32px) }
@@ -58,7 +59,8 @@ body::before{
 /* Header */
 .site-header{ 
     position:sticky; 
-    top:0; z-index:50; 
+    top:0; 
+    z-index:50; 
     backdrop-filter:saturate(140%) blur(8px); 
     background:linear-gradient(180deg, rgba(7,15,22,.75), rgba(7,15,22,.45)); 
     border-bottom:1px solid var(--line) }
@@ -70,7 +72,8 @@ body::before{
 .site-brand{ 
     color:var(--ink-1); 
     text-decoration:none; 
-    font-weight:800 }
+    font-weight:800;
+    font-size: 25px }
 .site-nav{ 
     display:flex; 
     gap:6px }
@@ -81,7 +84,7 @@ body::before{
     border-radius:12px; 
     transition:.2s }
 .nav-link:hover{ 
-    color:var(--ink-1); 
+    color:var(--teal); 
     background:rgba(255,255,255,.05) }
 .nav-link.is-active{ 
     color:var(--ink-1); 
@@ -118,17 +121,22 @@ body::before{
     gap:10px; 
     padding:12px 16px; 
     border-radius:14px; 
-    border:1px solid var(--line); 
+    border:1px solid var(--line);
+     
     text-decoration:none; 
     color:var(--ink-1); 
     transition:.2s; 
     box-shadow:var(--shadow) }
 .button:hover{ 
     transform:translateY(-1px); 
-    filter:saturate(115%) }
+    filter:saturate(115%);
+    border-color: var(--teal); }
 .button-primary{ 
     background:linear-gradient(90deg, rgba(45,212,191,.22), rgba(34,211,238,.14)); 
     border-color:transparent }
+.button-primary:hover{
+    border-color: var(--teal);
+    }
 .link{ 
     color:var(--ink-1); 
     text-decoration:none }
@@ -150,7 +158,17 @@ body::before{
     overflow:hidden }
 .card:hover{ 
     transform:translateY(-2px); 
-    box-shadow:var(--shadow) }
+    box-shadow:var(--shadow); 
+    border-color: var(--teal);}
+.card .card-link { 
+    position: absolute; 
+    inset: 0; 
+    border-radius: 
+    var(--radius); 
+    z-index: 1; }
+.card .badge, .card h3, .card p, .card .tag-list, .card .actions { 
+    position: relative; 
+    z-index: 2; }
 .badge{ 
     color:var(--teal); 
     font-weight:600; 
