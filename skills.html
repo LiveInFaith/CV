@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills — Heinrich Rudman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-brand" href="index.html">Heinrich Rudman</a>
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a class="nav-link" href="main.html">Home</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link is-active" href="skills.html" aria-current="page">Skills</a>
+        <a class="nav-link" href="contact.html">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <h1 class="section-title">Skills</h1>
+          <p class="section-note">Short descriptions with logos</p>
+        </header>
+
+        <div class="skills-grid">
+          <!-- Repeat blocks and replace logo src with your assets -->
+          <article class="skill-item">
+            <img class="skill-logo" src="assets/logos/csharp.svg" alt="C# logo" />
+            <div>
+              <h3 class="skill-name">C# / .NET</h3>
+              <p class="skill-text">Back‑end development, LINQ, REST APIs, data access layers, clean architecture.</p>
+            </div>
+          </article>
+
+          <article class="skill-item">
+            <img class="skill-logo" src="assets/logos/java.svg" alt="Java logo" />
+            <div>
+              <h3 class="skill-name">Java</h3>
+              <p class="skill-text">Desktop apps with Swing, MVC patterns, Derby/PostgreSQL integration.</p>
+            </div>
+          </article>
+
+           <article class="skill-item">
+            <img class="skill-logo" src="assets/logos/postgresql.svg" alt="PostgreSQL logo" />
+            <div>
+              <h3 class="skill-name">PostgreSQL</h3>
+              <p class="skill-text">Relational modeling, JDBC usage, and essential SQL performance practices.</p>
+            </div>
+          </article>
+
+          <article class="skill-item">
+            <img class="skill-logo" src="assets/logos/node.svg" alt="Node.js logo" />
+            <div>
+              <h3 class="skill-name">Node.js / Express</h3>
+              <p class="skill-text">RESTful APIs, MongoDB Atlas, EJS templating, and JWT auth basics.</p>
+            </div>
+          </article>
+
+          <article class="skill-item">
+            <img class="skill-logo" src="assets/logos/mongodb.svg" alt="MongoDB logo" />
+            <div>
+              <h3 class="skill-name">MongoDB</h3>
+              <p class="skill-text">Schema design, indexes, CRUD pipelines, and Atlas deployments.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="year-s"></span> Heinrich Rudman</span>
+      <a class="link" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+  <script>document.getElementById('year-s').textContent = new Date().getFullYear();</script>
+</body>
+</html>

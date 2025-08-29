@@ -1,1 +1,91 @@
 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Heinrich Rudman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-brand" href="index.html">Heinrich Rudman</a>
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a class="nav-link" href="main.html">Home</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+        <a class="nav-link is-active" href="contact.html" aria-current="page">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <h1 class="section-title">Contact Me</h1>
+          <p class="section-note">Any Questions or inquiries feel free to contact me</p>
+        </header>
+
+        <div class="contact-layout">
+          <form id="contactForm" class="contact-form">
+            <label>
+              <span>Name</span>
+              <input id="name" name="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input id="email" name="email" type="email" required />
+            </label>
+            <label class="full">
+              <span>Message</span>
+              <textarea id="message" name="message" required></textarea>
+            </label>
+            <button class="button button-primary" type="submit">Send Message</button>
+            <p id="formNote" class="form-note"></p>
+          </form>
+
+          <aside class="contact-card">
+            <h3>Direct</h3>
+            <p>Email: <a class="link" id="mailLink" href="mailto:heinierudman12@gmail.com">heinierudman12@gmail.com</a></p>
+            <p>Location: South Africa</p>
+            <h3>Social</h3>
+            <p>
+              <a class="link" href="#">GitHub</a> ·
+              <a class="link" href="#">LinkedIn</a>
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="year-c"></span> Heinrich Rudman</span>
+      <a class="link" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-c').textContent = new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit', function(ev){
+      ev.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const to = document.getElementById('mailLink').getAttribute('href').replace('mailto:','');
+      const subject = encodeURIComponent('Website enquiry from ' + name);
+      const body = encodeURIComponent(`Name: ${name}
+Email: ${email}
+
+${message}`);
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      document.getElementById('formNote').textContent = 'Your email app should open. If not, message me directly.';
+    });
+  </script>
+</body>
+</html>

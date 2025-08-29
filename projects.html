@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Heinrich Rudman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-brand" href="index.html">Heinrich Rudman</a>
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a class="nav-link" href="main.html">Home</a>
+        <a class="nav-link is-active" href="projects.html" aria-current="page">Projects</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+        <a class="nav-link" href="contact.html">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <h1 class="section-title">Projects</h1>
+          <p class="section-note">Case studies, code, and demos</p>
+        </header>
+
+        <!-- Featured: Linear Programming -->
+        <article class="project featured">
+          <div class="project-media video-shell" aria-label="Linear Programming demo video placeholder">
+            <!-- Place your <video> or embedded demo here -->
+            <div class="video-placeholder">Project video goes here</div>
+          </div>
+          <div class="project-body">
+            <span class="badge">Featured Project</span>
+            <h2 class="project-title">Linear Programming Toolkit</h2>
+            <p class="project-text">A clean, human‑readable implementation of knapsack and branch‑and‑bound variants with a simple input format, table builder, and optional mailto contact. Designed for clarity and educational value.</p>
+            <div class="tag-list">
+              <span class="tag">C#</span><span class="tag">Algorithms</span><span class="tag">Linear Programming</span>
+            </div>
+            <div class="project-actions">
+              <a class="button button-primary" href="#">View Code</a>
+              <a class="button" href="#">Download</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project cardish">
+            <div class="project-media video-shell"><div class="video-placeholder">Video slot</div></div>
+            <div class="project-body">
+              <h3 class="project-title">Inventory System</h3>
+              <p class="project-text">CRUD app with LINQ filtering and JSON import/export.</p>
+              <div class="tag-list"><span class="tag">C#</span><span class="tag">MongoDB</span></div>
+              <div class="project-actions">
+                <a class="button" href="#">View Code</a>
+                <a class="button" href="#">Download</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project cardish">
+            <div class="project-media video-shell"><div class="video-placeholder">Video slot</div></div>
+            <div class="project-body">
+              <h3 class="project-title">Student Wellness (Java)</h3>
+              <p class="project-text">MVC desktop app with Derby DB and table views.</p>
+              <div class="tag-list"><span class="tag">Java</span><span class="tag">Swing</span></div>
+              <div class="project-actions">
+                <a class="button" href="#">View Code</a>
+                <a class="button" href="#">Download</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project cardish">
+            <div class="project-media video-shell"><div class="video-placeholder">Video slot</div></div>
+            <div class="project-body">
+              <h3 class="project-title">VR Drone HUD</h3>
+              <p class="project-text">TMP overlays and keyboard fallbacks for non‑VR testing.</p>
+              <div class="tag-list"><span class="tag">Unity</span><span class="tag">C#</span></div>
+              <div class="project-actions">
+                <a class="button" href="#">View Code</a>
+                <a class="button" href="#">Download</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project cardish">
+            <div class="project-media video-shell"><div class="video-placeholder">Video slot</div></div>
+            <div class="project-body">
+              <h3 class="project-title">Volunteers REST API</h3>
+              <p class="project-text">Express API for volunteer records with MongoDB Atlas.</p>
+              <div class="tag-list"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span></div>
+              <div class="project-actions">
+                <a class="button" href="#">View Code</a>
+                <a class="button" href="#">Download</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="year-p"></span> Heinrich Rudman</span>
+      <a class="link" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+  <script>document.getElementById('year-p').textContent = new Date().getFullYear();</script>
+</body>
+</html>
