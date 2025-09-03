@@ -227,17 +227,26 @@ body::before{
     margin-top:14px; 
     flex-wrap:wrap }
 
-/* Video placeholder */
-.video-shell{ 
+/* Image placeholder */
+.image-shell{ 
     aspect-ratio:16/9; 
     background:rgba(255,255,255,.02);
     border:1px dashed rgba(255,255,255,.15); 
     border-radius:14px; 
     display:grid; 
-    place-items:center }
-.video-placeholder{ 
+    place-items:center;
+    overflow:hidden; 
+}
+.image-shell img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.image-placeholder{ 
     color:var(--ink-2); 
-    font-size:14px }
+    font-size:14px;
+}
 
 /* Skills page */
 .skills-grid{ 
