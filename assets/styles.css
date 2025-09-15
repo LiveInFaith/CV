@@ -139,7 +139,8 @@ body::before{
     }
 .link{ 
     color:var(--ink-1); 
-    text-decoration:none }
+    text-decoration:none; 
+    margin: 10px }
 .link:hover{ 
     text-decoration:underline }
 
@@ -323,3 +324,15 @@ body::before{
   body::before{ animation:none }
   .button,.card,.project{ transition:none }
 }
+
+.site-footer .socials { 
+    display: flex; 
+    gap: 12px; 
+    align-items: center; }
+@media (max-width: 560px) {
+  .site-footer .socials { 
+    order: 3; 
+    width: 100%; 
+    margin-top: 6px; }
+}
+
